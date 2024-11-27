@@ -15,6 +15,6 @@ dependencies {
     implementation project(':app:html-cleaner')
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib"
-    implementation "com.github.ajalt.clikt:clikt:3.4.0"
+    implementation "com.github.ajalt.clikt:clikt:3.5.2"
     implementation "com.squareup.okio:okio:${versions.okio}"
 }
