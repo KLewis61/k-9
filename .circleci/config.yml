@@ -30,7 +30,7 @@ jobs:
     steps:
        - attach_workspace:
            at: .
-       - run ls -lh   
+       - run: ls -lh   
        - auto_ci/mobile_security_test:
            auto_file: ./app/k9mail/build/outputs/apk/debug/k9mail-debug.apk
            auto_wait: "90"
