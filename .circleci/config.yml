@@ -37,4 +37,10 @@ jobs:
            auto_score: "50"
            auto_show_status_messages: "true"
 
+workflows:
+  main:
+    jobs:
+      - build
+      - scan
+
 
