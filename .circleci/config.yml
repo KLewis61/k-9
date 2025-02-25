@@ -38,9 +38,11 @@ jobs:
            auto_show_status_messages: "true"
 
 workflows:
-  main:
+  build_and_scan:
     jobs:
       - build
-      - scan
+      - scan:
+          requires:
+           - build
 
 
