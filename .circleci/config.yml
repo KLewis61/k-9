@@ -32,7 +32,7 @@ jobs:
            at: .
           
        - auto_ci/mobile_security_test:
-           auto_file: ./k9mail-debug.apk
+           auto_file: k9mail-debug.apk
            auto_wait: "90"
            auto_score: "50"
            auto_show_status_messages: "true"
