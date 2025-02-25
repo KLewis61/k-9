@@ -25,15 +25,16 @@ jobs:
 
   scan:
     docker:
-       - image: openjdk:8
+       - image: openjdk:11
+       
     steps:
        - attach_workspace:
            at: /tmp/workspace
           
-        - auto_ci/mobile_security_test:
-            auto_file: /tmp/workspace/k9mail-debug.apk
-            auto_wait: "90"
-            auto_score: "50"
-            auto_show_status_messages: "true"
+       - auto_ci/mobile_security_test:
+           auto_file: /tmp/workspace/k9mail-debug.apk
+           auto_wait: "90"
+           auto_score: "50"
+           auto_show_status_messages: "true"
 
 
