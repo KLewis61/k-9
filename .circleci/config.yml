@@ -24,9 +24,9 @@ jobs:
 
 
   scan:
-     docker:
+    docker:
        - image: openjdk:8
-     steps:
+    steps:
        - attach_workspace:
            at: /tmp/workspace
           
