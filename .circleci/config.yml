@@ -9,7 +9,7 @@ orbs:
 jobs:
   build:
     executor:
-      name: android/android-machine
+      name: android/android-docker
       resource-class: large
     steps:
       - checkout
