@@ -8,13 +8,14 @@ jobs:
   build:
     docker:
       - image: cimg/android:2021.08.1
+      
     steps:
       - checkout
       - run: ./gradlew androidDependencies
       - run: ./gradlew assembleDebug --stacktrace --no-daemon
       - auto_ci/mobile_security_test:
-          auto_file: /tmp/myworkspace/test.apk
-          auto_wait: "30"
+          auto_file: ./app/k9mail/build/outputs/apk/debug/k9mail-debug.apk
+          auto_wait: "90"
           auto_score: "50"
           auto_show_status_messages: "true"
 
