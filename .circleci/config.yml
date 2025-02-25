@@ -9,8 +9,8 @@ orbs:
 jobs:
   build:
     executor:
-      name: android/android-docker
-      resource-class: large
+      machine:
+        image: ubuntu-2204:2024.11.1
     steps:
       - checkout
       - run:
