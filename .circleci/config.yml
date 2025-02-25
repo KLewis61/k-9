@@ -17,7 +17,7 @@ jobs:
       # into the workspace for use in downstream job. Must be an absolute path,
       # or relative path from working_directory. This is a directory on the container which is
       # taken to be the root directory of the workspace.
-          root: workspace
+          root: .
             # Must be relative path from root
           paths:
             - ./app/k9mail/build/outputs/apk/debug/
@@ -29,7 +29,7 @@ jobs:
        
     steps:
        - attach_workspace:
-           at: /tmp/workspace
+           at: .
           
        - auto_ci/mobile_security_test:
            auto_file: /tmp/workspace/k9mail-debug.apk
