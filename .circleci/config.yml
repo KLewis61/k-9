@@ -2,6 +2,7 @@ version: 2
 
 orbs:
   android: circleci/android@3.1.0
+  auto_ci: nowsecure/ci-auto-orb@1.2.1
   
 jobs:
   build:
@@ -11,5 +12,9 @@ jobs:
       - checkout
       - run: ./gradlew androidDependencies
       - run: ./gradlew assembleDebug --stacktrace --no-daemon
-      - store_artifacts:
-            path: build/libs
+      - auto_ci/mobile_security_test:
+          auto_file: /tmp/myworkspace/test.apk
+          auto_wait: "30"
+          auto_score: "50"
+          auto_show_status_messages: "true"
+
